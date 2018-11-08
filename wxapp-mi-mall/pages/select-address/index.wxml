@@ -1,0 +1,33 @@
+<wxs src="../../utils/tools.wxs" module="tools" />
+
+<view class="container">
+  <view class="address-list">
+      <view class="a-address"  wx:for-items="{{addressList}}" wx:key="{{index}}">
+            <view class="left-text "  data-id="{{item.id}}">
+            <view class='topBox clear'>
+              <view class="name-tel clear">
+                  <view class='fl'>{{item.username}}</view> <view class='fr'>{{item.mobile}}</view> 
+              </view>
+              <view class="address-box">
+                  {{item.province}}{{item.city}}{{item.district}} {{item.address}}
+              </view>  
+            </view>
+            <view class='btmBox clear'>
+              <view wx:if="{{selectA}}" class='fl swBox'>
+                <switch  class='miniSwitch' data-index="{{index}}" data-id="{{item.id}}" checked='{{item.state}}' bindchange="addessDefault" size="mini" /><text>默认地址</text>
+              </view>
+              <view wx:else class='fl swBox'>
+                <switch class='miniSwitch' data-index="{{index}}" data-id="{{item.id}}"  bindchange="selectTap" size="mini" /><text>选择地址</text>
+              </view>
+              <view class='fr'>
+                <view class="right-edit fr" bindtap="delAddess" data-id="{{item.id}}">删除</view>                     
+                <view class="right-edit fr" bindtap="editAddess" data-id="{{item.id}}">编辑</view>                     
+              </view>
+            </view>
+            </view>   
+      </view>
+  </view>
+  <view class="bottom-box">
+      <view class="add-btn" bindtap="addAddess">新增收货地址</view>
+  </view>
+</view>

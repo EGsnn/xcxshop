@@ -1,0 +1,9 @@
+<!--pages/kuaidi/kuaidi.wxml-->
+<view class='title'>物流信息</view>
+<view class='num'>快递单号：{{kuaidinum}}</view>
+<view class='content'>
+  <view class='item-list' wx:for="{{kuaidiDetail}}">
+    <view class='time'>{{item.time}} </view>
+      <text>{{item.context}}</text>
+  </view>
+</view>

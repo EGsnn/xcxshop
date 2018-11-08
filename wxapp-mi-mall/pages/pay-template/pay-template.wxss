@@ -1,0 +1,129 @@
+/* pages/pay-template/pay-template.wxss */
+.layer {
+  z-index: 1001;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, .6)  ;
+  top: 0;
+}
+@keyframes zoomIn {
+    0% {
+        bottom: -100%;
+        transform: scale3d(.8,.8,.8)
+    }
+
+    50% {
+        bottom: 0;
+    
+    }
+
+    100% {
+        bottom: 0;
+      
+    }
+}
+
+.tmpMainBox {
+  position: fixed;
+  bottom: 0;
+  z-index: 1002;
+  width: 100%;
+  background: #fff;
+  height: 55%;
+  animation: 1;
+  animation-name: zoomIn;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+    /* z-index: 1000 */
+    font-size:24rpx;
+
+}
+.tmpMainBox .title {
+  height: 80rpx;
+  font-size: 30rpx;
+  line-height: 80rpx;
+  border-bottom: 1rpx #ccc solid;
+  text-align: center
+}
+.tmpMainBox .title .closeBtn {
+  width: 40rpx;
+  height: 40rpx;
+  position: absolute;
+  left: 20rpx;
+  top: 20rpx;
+}
+.tmpMainBox .money {
+  font-size: 60rpx;
+  text-align: center;
+  padding: 15rpx 0; 
+}
+.tmpMainBox .order-info {
+  margin-left: 30rpx;
+  border-bottom: 1rpx #ccc solid;
+  line-height: 60rpx;
+  color: #000
+}
+.tmpMainBox  .order-payType{
+  margin-left: 30rpx;
+  line-height: 60rpx;
+  color: #000
+}
+.tmpMainBox  .order-payType text,
+.tmpMainBox .order-info text{
+  color: #888;
+  margin-right:20rpx;
+}
+.tmpMainBox .payType {
+  background: #fff;
+  box-sizing: border-box;
+  padding: 10rpx 30rpx;
+}
+.tmpMainBox .payList {
+  height: 80rpx;
+  line-height: 80rpx;
+    background: url(https://cdn.it120.cc/images/weappshop/gou.png) no-repeat 650rpx center;
+    background-size: 40rpx auto; 
+}
+.tmpMainBox .payList.active{
+    background: url(https://cdn.it120.cc/images/weappshop/gou-red.png) no-repeat 650rpx center;
+    background-size: 40rpx auto; 
+}
+.tmpMainBox .payType .left .icon {
+  width: 40rpx;
+  height: 32rpx;
+  vertical-align: -3rpx;
+  margin-right: 30rpx;
+  margin-left: 10rpx;
+}
+.tmpMainBox .payType .left text {
+  display: inline-block;
+  background: #e14632;
+  color: #fff;
+  line-height: 30rpx;
+  padding: 5rpx 10rpx;
+  border-radius: 5rpx;
+}
+.tmpMainBox .payNowBtn {
+  width: 600rpx;
+  height: 60rpx;
+  margin: 0 auto;
+
+  padding: 5rpx 10rpx;
+  border-radius: 5rpx;
+}
+.tmpMainBox .payNowBtn {
+  width: 680rpx;
+  height: 60rpx;
+  margin: 0 auto;
+  line-height: 60rpx;
+  text-align: center;
+  background: #0e8de5;
+  color: #fff;
+  border-radius: 10rpx;
+  position: absolute;
+  bottom: 30rpx;
+  font-size: 30rpx;
+  left: 0;
+  right: 0;
+}

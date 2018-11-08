@@ -1,0 +1,81 @@
+<import src="../pay-template/pay-template.wxml"/>
+<wxs src="../../utils/tools.wxs" module="tools" />
+<view class="container">
+    <view class="sec-wrap">
+      <view class='order-title'>{{orderDetail.state_name}}<text class='icon'></text></view>
+      <navigator class='gotoKuaidi' wx:if="{{orderDetail.express_num}}" url='/pages/kuaidi/kuaidi?num={{orderDetail.express_num}}'>查看物流详情></navigator>
+    </view>
+    <view class="address-view">
+      <view class="add-top">
+        <view>收货人：{{orderDetail.username}}</view>
+        <view>{{orderDetail.mobile}}</view>
+      </view>
+      <view>收货地址：{{orderDetail.province}}{{orderDetail.city}}{{orderDetail.district}} {{orderDetail.address}}</view>
+    </view>
+    <view class="order-detail">
+      <view class="or-title">订单号：{{orderDetail.order_num}}</view>
+      <view class="or-main" wx:for="{{orderDetail.goods_detail}}" wx:for-item="goodsItem" wx:key="{{index}}">
+        <view class="img-box"><image src="{{goodsItem.imgs}}"></image></view>
+        <view class="or-con">
+          <view class="title">{{goodsItem.goods_name}}</view>
+          <view class="price">
+            <view class="price-m">单价：￥{{goodsItem.goods_price}} 数量：{{goodsItem.buy_num}}</view>
+            <view class="amount">￥{{goodsItem.goods_price*goodsItem.buy_num}}</view>
+          </view>
+          <view bindtap='refundOrder' wx:if="{{(orderDetail.state === 1 || orderDetail.state === 2)&&goodsItem.state ===0 }}" data-id='{{orderDetail.order_num}}' data-shopid='{{goodsItem.goods_id}}' class="date">申请退款</view> 
+          <view class="date  {{goodsItem.state == 1?'bg-wait':goodsItem.state == 2?'bg-pass':goodsItem.state == 3?'bg-err': ' '}}" wx:if="{{goodsItem.state !== 0}}">{{goodsItem.state_name}}</view>         
+        </view>
+      </view>
+    </view>
+    <view class="goods-view">
+      <!-- <view class="goods-list">
+        <view class="g-title">商品总价：</view>
+        <view class="g-price">￥{{orderDetail.zpa}}</view>
+      </view> -->
+      <view class="goods-list">
+        <view class="g-title">商品运费：</view>
+        <view class="g-price">￥0</view>
+      </view>
+      <!-- <view class="goods-list">
+        <view class="g-title">店铺优惠：</view>
+        <view class="g-price">￥{{orderDetail.zpa}}</view>
+      </view> -->
+      <view class="goods-list">
+        <view class="g-title">商品总价：</view>
+        <view class="g-price">￥{{orderDetail.order_price}}</view>
+      </view>
+      <view class="goods-list">
+        <view class="g-title">实际付款：</view>
+        <view class="g-price">￥{{orderDetail.actually_paid}}</view>
+      </view>
+    </view>
+    <view class="order-list">
+      <view class="order-l">
+        <view>订单编号：</view>
+        <view>{{orderDetail.order_num}}</view>
+      </view>
+      <!-- <view  wx:if="{{orderDetail.freight}}" class="order-l">
+        <view>支付交易号：</view>
+        <view>123123123sadadaa</view>
+      </view> -->
+      <view class="order-l">
+        <view>下单时间：</view>
+        <view>{{orderDetail.create_time}}</view>
+      </view>
+      <view wx:if="{{orderDetail.state !== 0}}" class="order-l">
+        <view>付款时间：</view>
+        <view>{{orderDetail.paid_at}}</view>
+      </view>
+      <!-- <view wx:if="{{orderDetail.paid_at}}" class="order-l">
+        <view>发货时间：</view>
+        <view>{{tools.formatTime(orderDetail.paid_at)}}</view>
+      </view> -->
+    </view>
+    <view  wx:if="{{orderDetail.state === 1 ||orderDetail.state === 0  }}" class='BtmBtnBox'>
+      <view  wx:if="{{orderDetail.state === 0}}" class="btn topay-btn" bindtap="toPayTap" data-id="{{orderDetail.order_num}}" data-money="{{item.amountReal}}" data-score="{{item.score}}">马上付款</view>  
+      <!-- <view wx:if="{{orderDetail.state === 2}}" class="btn rate-btn" data-id="{{orderDetail.order_num}}" bindtap="rateOrder">评价</view>       -->
+      <view wx:if="{{orderDetail.state === 1}}" class="btn rate-btn" data-id="{{orderDetail.order_num}}" bindtap="confirmOrder">确认收货</view>      
+      <view wx:if="{{orderDetail.state === 0 && !orderDetail.no_cancel && !orderDetail.is_kj && !orderDetail.is_pt}}" class="btn refund-btn" data-id="{{orderDetail.order_num}}" bindtap="cancelOrderTap">取消订单</view>     
+    </view>
+    <template style="z-index:1001" is="{{'payTemplate'}}" wx-if="{{orderSucceed}}" data="{{...papInfo,...orderInfo,yunPrice}}"></template>
+</view>

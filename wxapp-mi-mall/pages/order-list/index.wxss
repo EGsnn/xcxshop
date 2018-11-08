@@ -1,0 +1,172 @@
+@import "../pay-template/pay-template.wxss";
+
+.container{
+    width: 100%;
+    background-color: #F2f2f2;
+    position: relative
+}
+.status-box{
+    width:100%;
+    height: 88rpx;
+    line-height: 88rpx;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    position: fixed;
+    top: 0;
+    z-index: 10;
+}
+.status-box .status-label{
+    width: 150rpx;
+    height: 100%;
+    text-align: center;
+    font-size:28rpx;
+    color:#666;
+    box-sizing: border-box;
+    position: relative;
+}
+.status-box .status-label.active{
+    color:#e64340;
+    border-bottom: 6rpx solid #e64340;
+}
+.status-box .status-label .red-dot{
+    width: 16rpx;
+    height: 16rpx;
+    position: absolute;
+    left: 116rpx;
+    top:23rpx;
+    background-color: #f43530;
+    border-radius: 50%;
+}
+.no-order{
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    top: 88rpx;
+    left: 0;
+    right: 0;
+    text-align: center;
+    padding-top: 203rpx;
+    background-color: #F2f2f2;
+}
+.no-order-img{
+    width: 81rpx;
+    height: 96rpx;
+    margin-bottom: 31rpx;
+}
+.no-order .text{
+    font-size:28rpx;
+    color:#999999;
+    text-align: center
+}
+.order-list{
+    width: 100%;
+    padding-top: 88rpx;
+}
+.order-list .a-order{
+    width: 100%;
+    background-color: #fff;
+    margin-top: 20rpx;
+}
+.order-list .a-order .order-date{
+    padding: 0 30rpx;
+    height: 88rpx;
+    display: flex;
+    justify-content: space-between;
+    font-size:24rpx;
+    color:#999;
+    align-items: center;
+    /* border-bottom: 1rpx #ddd solid; */
+}
+.order-list .a-order .order-date .red{
+    font-size: 24rpx;
+    color:#252525;
+    width:150rpx;
+    text-align:right;
+}
+.cententBox{
+  display: flex;
+  padding: 10rpx 30rpx ;
+  /* background: #f9f9f9; */
+  margin-bottom: 10rpx;
+  overflow: hidden;
+  justify-content: flex-start ;
+  
+}
+.cententBox .img-box{
+  width: 100rpx;
+  height: 100rpx;
+  overflow: hidden;
+  border: 1rpx #ddd solid;
+  float: left;
+  margin-right: 10rpx;
+}
+.cententBox image{
+  width: 100rpx;
+  height: 100rpx;
+}
+.doct {
+  color: #999
+}
+.cententBox .goods-name{
+  width: 300rpx;
+  /* line-height: 150rpx; */
+  font-size: 30rpx;
+  color:#252525;
+  font-weight: bold;
+  padding-top: 40rpx;
+}
+.goods-desc{
+  width: 270rpx;
+  text-align: right;
+}
+.goods-desc .goods-date{
+  font-size: 30rpx;
+  color: #999;
+  text-decoration:line-through
+}
+.goods-desc .goods-price{
+  color: #e14632;
+  font-size: 30rpx;
+  margin-top: 20rpx;
+}
+.order-list .a-order .price-box{
+  position: relative;
+  box-sizing: border-box;
+  padding: 20rpx 30rpx 20rpx 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  font-size:24rpx;
+}
+.a-order .price-box .btn{
+    width: 133rpx;
+    height: 50rpx;
+    box-sizing: border-box;
+    text-align: center;
+    line-height: 50rpx;
+    border-radius: 25rpx;
+    margin-left: 20rpx;
+}
+.a-order .price-box .cancel-btn,.refund-btn{
+    border: 1rpx solid #999;
+    color: #999;
+}
+.a-order .price-box .topay-btn,.rate-btn{
+    border:1px solid #88d4a0;
+    color: #88d4a0;
+}
+
+.textBox {
+  text-align: right;
+  font-size: 20rpx;
+  padding-right: 30rpx;
+  color: #999;
+    border-bottom: 1rpx solid #eee;
+}
+.textBox text{
+  font-weight: 500;
+  font-size: 26rpx;
+  color: #333;
+}

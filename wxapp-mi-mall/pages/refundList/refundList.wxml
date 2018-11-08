@@ -1,0 +1,17 @@
+<!--pages/refundList/refundList.wxml-->
+<view class='content'>
+  <view class='listBox'>
+    <view class='list' wx:for="{{refundList}}">
+      <view class='text1'><text>订单号：{{item.order_num}}</text><text class='fr'>申请时间：{{item.refund_time}}</text></view>
+      <view class='clear center'>
+          <image class='img fl' mode='aspectFill' src='{{item.imgs}}'></image>
+          <view class='fl ml30'>
+            <view class='name'>{{item.goods_name}}</view>
+            <view>数量：{{item.buy_num}}</view>
+            <view class="date  {{item.state == 1?'bg-wait':item.state == 2?'bg-pass':item.state == 3?'bg-err': ' '}}" wx:if="{{item.state !== 0}}">{{item.state_name}}</view>         
+            
+          </view>
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,149 @@
+@import "../pay-template/pay-template.wxss";
+page{
+  min-height: 100%;
+  background-color: #f3f3f3;
+}
+.container{
+  min-height: 100%;
+  overflow: hidden;
+  overflow-y: hidden;
+    font-size: 24rpx;
+}
+.sec-wrap{
+    background-color: #fff;
+    font-size: 24rpx;
+    color: #252525;
+    padding: 20rpx;
+    height: 80rpx;
+}
+.order-title {
+  font-size: 36rpx;
+  font-weight: 600;
+}
+.gotoKuaidi{
+  color: #999;
+}
+.order-title .icon {
+  font-size: 18rpx;
+  color: #aaa;
+  font-family: Arial, Helvetica, sans-serif
+}
+.address-view{
+  padding: 20rpx;
+  background: #FFF;
+  margin: 20rpx 0;
+  color: #252525;
+  font-size: 24rpx;
+}
+.add-top{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20rpx;
+}
+.order-detail{
+  background: #FFF;
+  color: #252525;
+  font-size: 24rpx;
+}
+.or-title{
+  padding: 15rpx 20rpx;
+  border-bottom: 1px solid #f3f3f3;
+}
+.or-main{
+  padding: 20rpx;
+  display: flex;
+  /* background: #f9f9f9; */
+  /* margin-top: 10rpx; */
+}
+.img-box{
+  width: 130rpx;
+  height: 130rpx;
+  overflow: hidden;
+  margin-right: 20rpx;
+}
+.img-box image{
+  width: 130rpx;
+  height: 130rpx;
+}
+.or-con{
+  width: 538rpx;
+}
+.or-con .title {
+  width: 400rpx;
+  white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+}
+.or-con .date{
+  margin: 20rpx 0 0;
+  float: right;
+  border:1rpx #ccc solid;
+  border-radius: 18rpx;
+  height: 45rpx;
+  line-height: 45rpx;
+  padding: 0 20rpx;
+  color: #333;
+}
+.or-con .date.disable{
+  background: #ccc;
+  color: #fff;
+}
+.price{
+  display: flex;
+  justify-content: space-between;
+}
+.price .price-m{
+  color: #999;
+}
+.price .amount{
+  color: #333;
+  
+}
+.goods-view,
+.order-list{
+  background: #FFF;
+  padding: 20rpx;
+  margin-top: 20rpx;
+}
+.order-list{
+  margin-bottom: 100rpx;
+}
+.goods-list,
+.order-l{
+  display: flex;
+  justify-content: space-between;
+  height: 50rpx;
+  line-height: 50rpx;
+}
+.goods-list .g-price{
+  color: #e14632;
+}
+.BtmBtnBox {
+  height: 80rpx;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  background: #fff;
+  padding-right: 30rpx;
+  box-sizing: border-box;
+  border-top: 1rpx #ccc solid;
+}
+.BtmBtnBox .btn{
+    width: 133rpx;
+    height: 47rpx;
+    box-sizing: border-box;
+    text-align: center;
+    line-height: 47rpx;
+    border-radius: 50rpx;
+    margin-left: 20rpx;
+    float: right;
+    margin-top: 20rpx;
+}
+.BtmBtnBox .cancel-btn,.refund-btn{
+    border: 1rpx solid #252525;
+    color: #252525;
+}
+.BtmBtnBox .topay-btn,.rate-btn{
+    border:1px solid #e64340;
+    color: #e64340;
+}

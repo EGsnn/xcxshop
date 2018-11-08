@@ -1,0 +1,29 @@
+/* pages/kuaidi/kuaidi.wxss */
+page {
+  background: #fff;
+  padding: 30rpx 28rpx;
+  font-size: 28rpx;
+}
+.title {
+  font-size: 38rpx;
+  font-weight: 600;
+}
+.num {
+  color: #999;
+  border-bottom: 1rpx #ddd solid;
+  margin-bottom: 10rpx;
+}
+.content {
+  color: #999;
+  background: #fff;
+}
+.content .item-list {
+  margin-top: 20rpx;
+}
+.content .item-list:first-child {
+  color: #333;
+}
+.content .time{
+  color: #999;
+  font-size: 24rpx;
+}

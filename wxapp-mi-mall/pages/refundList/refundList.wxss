@@ -1,0 +1,38 @@
+/* pages/refundList/refundList.wxss */
+.listBox {
+  font-size: 28rpx;
+  color: #666;
+}
+.list {
+  margin-top: 10rpx;
+  padding: 28rpx;
+  box-sizing: border-box;
+  background: #fff;
+  font-size: 24rpx;
+}
+.listBox .img{ 
+  width: 120rpx;
+  height: 120rpx;
+  margin-top: 10rpx;
+}
+.center {
+  margin-top: 15rpx;
+}
+.name {
+  margin-top: 8rpx;
+  width: 400rpx;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.date{
+  margin: 10rpx 0 0;
+  width: 100rpx;
+  text-align: center;
+  border:1rpx #ccc solid;
+  border-radius: 18rpx;
+  height: 45rpx;
+  line-height: 45rpx;
+  padding: 0 20rpx;
+  color: #333;
+}

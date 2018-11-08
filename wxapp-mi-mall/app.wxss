@@ -1,0 +1,107 @@
+/**app.wxss**/
+@import "./lib/weui.wxss";
+
+page{
+  background: #ebebeb;
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%; 
+  box-sizing: border-box;
+} 
+/*隐藏滚动条*/
+::-webkit-scrollbar{    
+  height: 0;
+  width: 0;
+  color: transparent;
+}
+.fl{
+  float: left
+}
+.fr{
+  float: right
+}
+.flexBox{
+  display: flex;
+  width: 750rpx;
+}
+.flex1 {
+  flex: 1;
+  text-align: center
+}
+.wx_title {
+  padding-left: 30rpx;
+  font-size: 30rpx;
+  line-height: 80rpx;
+  height: 80rpx;
+}
+.wx_box {
+  margin: 20rpx;
+  width: 710rpx;
+  background: #fff;
+  border-radius: 10rpx;
+}
+.flexWarp {
+  flex-wrap:wrap
+}
+.magin-c{
+  margin: 20rpx auto;
+  display: block;
+}
+
+.clear {
+	overflow: hidden
+}
+/*color  */
+.cl-price {
+  color: #f77100 !important;
+}
+/* background */
+.bg-wait{
+  background: #FEAE1B !important;
+  border: none !important;
+  color: #fff !important;
+}
+.bg-err {
+  background: #FF4351 !important;
+  color: #fff !important;
+  border: none !important;
+}
+.bg-pass {
+  background: #A5DE37 !important;
+  border: none !important;
+  color: #fff !important;
+}
+/*padding  */
+.pl30 {
+  padding-left:30rpx; 
+}
+
+/*margin  */
+.mgB10 {
+  margin-bottom:10rpx; 
+}
+.mgB20 {
+  margin-bottom:20rpx; 
+}
+.ml30 {
+  margin-left: 30rpx;
+}
+
+/*字体大小  */
+.fs30 {
+  font-size: 30rpx;
+}
+.fs20 {
+  font-size: 20rpx;
+}
+.miniSwitch {
+  transform:scale(0.6);
+}
+.textr {
+  text-align: right
+}

@@ -1,0 +1,84 @@
+<import src="../pay-template/pay-template.wxml"/>
+
+<view class="container">
+     <form bindsubmit="createOrder" report-submit="true">
+     <view class="address-box" wx:if="{{isNeedLogistics > 0}}">
+        <view class="add-address" hidden="{{curAddressData}}">
+            <view class="title" bindtap="addAddress">新增收货地址</view>
+        </view>
+        <view class="show-address" hidden="{{!curAddressData}}" bindtap="selectAddress">
+            <view class="name-tel">{{curAddressData.username}}  {{curAddressData.mobile}}</view>
+            <view class="addr-text">{{curAddressData.province}}{{curAddressData.city}}{{curAddressData.district}} {{curAddressData.address}}</view>
+        </view>
+     </view>
+
+
+
+     <!--商品列表  -->
+     <view class="goods-list">
+        <!-- <view class="list-title">商品列表</view> -->
+        <view class='mgB10 listBox'  wx:for-items="{{goodsList}}" wx:key="{{index}}">
+          <view class="a-goods">
+              <view class="img-box">
+                  <image src="{{item.imgs}}" mode='aspectFill' class="img" />
+              </view>
+              <view class="text-box">
+                  <view class="arow arow01">
+                      <view class="goods-name">{{item.goods_name}}</view>
+                      <view class="goods-price cl-price">¥ <text class='fs30'>{{item.goods_price}}</text></view>
+                  </view>
+                  <!-- <view  class="arow arow02">
+                      <view class="goods-label">{{item.select_num}}</view>                
+                  </view> -->
+                  <view class="arow">
+                      <view class="goods-label cl-price"></view>         
+                      <!-- 运费：{{item.shop_info[0].money/100}}        -->
+                      <view class="goods-num">x {{item.select_num}}</view>
+                  </view>
+              </view>
+          </view>
+          <!-- <view class='couponsBox '><view class='fl'>优惠券</view><view bindtap='useCoupons' class='rightIcon btn fr'>立即使用</view></view>           -->
+        </view>
+     </view>
+     <view class="peisong-way">
+        <view class="row-box" wx:if="{{isNeedLogistics > 0}}">
+            <view class="row-label">配送方式</view>
+            <view class="right-text" wx:if="{{yunPrice > 0}}">快递</view>
+            <view class="right-text" wx:if="{{yunPrice == 0}}">包邮</view>
+        </view>
+        <view class="row-box">
+            <view class="row-label">备注</view>
+            <view class="right-text">
+                <input bindblur='liuyan'  type="text" class="liuyan" placeholder="如需备注请输入" />
+            </view>
+        </view>
+     </view>
+
+     <view class="goods-info" >
+        <view class="row-box" wx:if="{{total_price >= 0 }}">
+            <view class="row-label">商品总价</view>
+            <view class="right-text">{{total_price}}元</view>
+        </view>
+        <view class="row-box" wx:if="{{total_price >= 0 }}">
+            <view class="row-label">订单金额</view>
+            <view class="right-text">{{total_price}}元</view>
+        </view>
+        <view class="row-box" >
+            <view class="row-label">运费</view>
+            <view class="right-text">{{0}}元</view>
+        </view>
+     </view>
+
+
+
+    <view wx-if="{{hasNoAddres}}" class='addAddress'>请先添写收货地址！</view>
+
+     <view class="jiesuan-box">
+        <view class="left-price">
+            <view class="total">合计：¥ {{total_price}} </view>
+        </view>
+        <button class="to-pay-btn" disabled='{{hasNoAddres}}' bindtap='createOrder'>微信支付</button>
+    </view>
+    </form>
+    <template style="z-index:1001" is="{{'payTemplate'}}" wx-if="{{orderSucceed}}" data="{{...papInfo,...orderInfo,yunPrice}}"></template>
+</view>

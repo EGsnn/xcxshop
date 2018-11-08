@@ -1,0 +1,35 @@
+var formatNumber = function (n) {
+  n = n.toString()
+  return n[1] ? n : '0' + n
+}
+
+var formatTime = function (date) {
+  date = toString(date).length === 13 ? date : date*1000;
+  var timer = getDate(date);
+  var year = timer.getFullYear()
+  var month = timer.getMonth() + 1
+  var day = timer.getDate()
+  var hour = timer.getHours()
+  var minute = timer.getMinutes()
+  var second = timer.getSeconds()
+
+  return [year, month, day].map(formatNumber).join('-') + ' ' + [hour, minute, second].map(formatNumber).join(':')
+}
+var split = function(str, ){
+
+}
+function clear(str, clearChart) {
+  var reg = getRegExp(',', 'g')
+
+  str = str.replace(reg, " ");//取消字符串中出现的所有逗号 
+  return str;
+} 
+function toFixed(num,length) {
+  return num.toFixed(length)
+}
+
+module.exports = {
+  formatTime: formatTime,
+  clear: clear,
+  toFixed: toFixed
+}
