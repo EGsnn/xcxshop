@@ -37,12 +37,7 @@
 
 ## 小程序 截图 
 
-![](https://raw.githubusercontent.com/EGsnn/xcxshop/master/readmeImg/xcx1.png) 
-![](https://raw.githubusercontent.com/EGsnn/xcxshop/master/readmeImg/xcx2.png) 
-![](https://raw.githubusercontent.com/EGsnn/xcxshop/master/readmeImg/xcx3.png) 
-![](https://raw.githubusercontent.com/EGsnn/xcxshop/master/readmeImg/xcx4.png)   
-![](https://raw.githubusercontent.com/EGsnn/xcxshop/master/readmeImg/xcx5.png)   
-![](https://raw.githubusercontent.com/EGsnn/xcxshop/master/readmeImg/xcx6.png)   
+![](https://raw.githubusercontent.com/EGsnn/xcxshop/master/readmeImg/xcx1.jpg) 
 
 
 
