@@ -29,19 +29,20 @@
 
 ## front-end(iview2)截图 
   登录界面</br>
-![](https://raw.githubusercontent.com/cinoliu/node-admin-/master/front-end(iview2)/Screenshot/login.jpg) 
-  商品报表</br>
-![](https://raw.githubusercontent.com/cinoliu/node-admin-/master/front-end(iview2)/Screenshot/goods.jpg)   
- 订单报表
-![](https://raw.githubusercontent.com/cinoliu/node-admin-/master/front-end(iview2)/Screenshot/oder.jpg) 
- 用户权限管理
-![](https://raw.githubusercontent.com/cinoliu/node-admin-/master/front-end(iview2)/Screenshot/user.jpg)   
+![](https://raw.githubusercontent.com/EGsnn/xcxshop/master/readmeImg/ht1.png) 
+![](https://raw.githubusercontent.com/EGsnn/xcxshop/master/readmeImg/ht2.png) 
+![](https://raw.githubusercontent.com/EGsnn/xcxshop/master/readmeImg/ht3.png) 
+![](https://raw.githubusercontent.com/EGsnn/xcxshop/master/readmeImg/ht4.png)   
 
 
 ## 小程序 截图 
 
-![](https://raw.githubusercontent.com/cinoliu/node-admin-/master/small-program/Screenshot/1.jpg) 
-
+![](https://raw.githubusercontent.com/EGsnn/xcxshop/master/readmeImg/xcx1.png) 
+![](https://raw.githubusercontent.com/EGsnn/xcxshop/master/readmeImg/xcx2.png) 
+![](https://raw.githubusercontent.com/EGsnn/xcxshop/master/readmeImg/xcx3.png) 
+![](https://raw.githubusercontent.com/EGsnn/xcxshop/master/readmeImg/xcx4.png)   
+![](https://raw.githubusercontent.com/EGsnn/xcxshop/master/readmeImg/xcx5.png)   
+![](https://raw.githubusercontent.com/EGsnn/xcxshop/master/readmeImg/xcx6.png)   
 
 
 
