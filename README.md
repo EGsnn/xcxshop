@@ -37,7 +37,7 @@
 
 ## 小程序 截图 
 
-![](https://raw.githubusercontent.com/EGsnn/xcxshop/master/readmeImg/xcx1.jpg) 
+![](https://raw.githubusercontent.com/EGsnn/xcxshop/master/readmeImg/xcx.jpg) 
 
 
 
